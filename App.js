@@ -8,20 +8,24 @@ import ForgetPasswoordScreen2 from "./components/forgetPassword2";
 import SetUpNewPasswordScreen from "./components/setUpNewPasswordScreen";
 import PasswordChangedScreen from "./components/passwordChangedScreen";
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <PasswordChangedScreen />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="SplashScreen">
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+        <Stack.Screen name="LogInScreen" component={LogInScreen} />
+        <Stack.Screen name="ForgetPasswoordScreen1" component={ForgetPasswoordScreen1} />
+        <Stack.Screen name="ForgetPasswoordScreen2" component={ForgetPasswoordScreen2} />
+        <Stack.Screen name="SetUpNewPasswordScreen" component={SetUpNewPasswordScreen} />
+        <Stack.Screen name="PasswordChangedScreen" component={PasswordChangedScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingBottom: 10,
-    backgroundColor: '#fff',
-  },
-});

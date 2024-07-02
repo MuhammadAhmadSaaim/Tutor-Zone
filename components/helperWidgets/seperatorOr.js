@@ -16,6 +16,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 16,
+        paddingBottom: 10,
+        backgroundColor: '#fff',
     },
     line: {
         flex: 1,

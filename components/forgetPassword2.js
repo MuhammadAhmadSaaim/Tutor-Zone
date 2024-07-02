@@ -35,6 +35,8 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         justifyContent: 'space-between',
+        paddingBottom: 10,
+        backgroundColor: '#fff',
     },
     imageLogo: {
         marginTop: 30,

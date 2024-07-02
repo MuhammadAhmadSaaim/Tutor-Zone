@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
         paddingRight: 16,
         justifyContent: 'flex-start',
+        paddingBottom: 10,
+        backgroundColor: '#fff',
     },
     imageLogo: {
         marginTop: 30,
