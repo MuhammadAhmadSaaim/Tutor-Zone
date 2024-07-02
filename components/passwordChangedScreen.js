@@ -1,10 +1,13 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const { width, height } = Dimensions.get('window');
 
 
 const PasswordChangedScreen = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={require('../assets/greenCircledTick.png')} />
@@ -13,12 +16,14 @@ const PasswordChangedScreen = () => {
                 <View>
                     <Text style={styles.title}>Password Changed</Text>
                     <Text style={styles.subTitle}>Your Password has been changed successfully</Text>
-
-
                 </View>
 
                 <View>
-                    <TouchableOpacity style={styles.createButton}>
+                    <TouchableOpacity style={styles.createButton} onPress={() => navigation.reset({
+                        index: 0,
+                        routes: [{ name: 'LogInScreen' }],
+                    })}
+                    >
                         <Text style={styles.buttonText}>Go Back To Log In Page</Text>
                     </TouchableOpacity>
                 </View>

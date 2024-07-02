@@ -1,8 +1,10 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 
 const SetUpNewPasswordScreen = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <View>
@@ -30,7 +32,10 @@ const SetUpNewPasswordScreen = () => {
             </View>
 
             <View>
-                <TouchableOpacity style={styles.createButton}>
+                <TouchableOpacity style={styles.createButton} onPress={() => navigation.reset({
+                    index: 0,
+                    routes: [{ name: 'PasswordChangedScreen' }],
+                })}>
                     <Text style={styles.buttonText}>Reset Password</Text>
                 </TouchableOpacity>
 

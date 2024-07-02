@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import SeparatorOR from "./helperWidgets/seperatorOr";
+import { useNavigation } from '@react-navigation/native';
 
 
 const ForgetPasswoordScreen2 = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <View>
@@ -16,11 +18,14 @@ const ForgetPasswoordScreen2 = () => {
             </View>
 
             <View>
-                <TouchableOpacity style={styles.createButton}>
+                <TouchableOpacity style={styles.createButton} onPress={() => navigation.reset({
+                    index: 0,
+                    routes: [{ name: 'SetUpNewPasswordScreen' }],
+                })}>
                     <Text style={styles.buttonText}>Continue</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.socialButtons}>
+                <TouchableOpacity style={styles.socialButtons} onPress={() => navigation.goBack()}>
                     <Text style={styles.socialButtonText}> Back To Log In</Text>
                 </TouchableOpacity>
             </View>

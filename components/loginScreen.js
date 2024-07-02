@@ -1,14 +1,16 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import SeparatorOR from "./helperWidgets/seperatorOr";
 
-
 const LogInScreen = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <Image style={styles.imageLogo} source={require('../assets/logoGrey.png')} />
             <Text style={styles.title}>Log In Now!</Text>
-            <Text style={styles.subTitle}>Lorem ipsum is simpy dumy text of printing and typing industry</Text>
+            <Text style={styles.subTitle}>Lorem ipsum is simply dummy text of the printing and typing industry</Text>
 
             <Text style={styles.inputTitle}>Username or Email</Text>
             <View style={styles.inputContainer}>
@@ -24,11 +26,14 @@ const LogInScreen = () => {
                 <TextInput
                     style={styles.inputText}
                     placeholder="Enter Password"
+                    secureTextEntry
                 />
                 <Image style={styles.socialButtonImage} source={require('../assets/password.png')} />
             </View>
 
-            <Text style={styles.forgetPassword}>Forgot Password?</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('ForgetPasswoordScreen1')}>
+                <Text style={styles.forgetPassword}>Forgot Password?</Text>
+            </TouchableOpacity>
 
             <TouchableOpacity style={styles.createButton}>
                 <Text style={styles.buttonText}>Log In Your Account</Text>
@@ -48,7 +53,7 @@ const LogInScreen = () => {
 
             <View style={styles.textContainer}>
                 <Text style={styles.logIntext}>Don't have an account?</Text>
-                <TouchableOpacity style={styles.textButton}>
+                <TouchableOpacity style={styles.textButton} onPress={() => navigation.navigate('SignUpScreen')}>
                     <Text style={styles.textButtonText}>Sign Up</Text>
                 </TouchableOpacity>
             </View>
@@ -81,7 +86,7 @@ const styles = StyleSheet.create({
     subTitle: {
         fontSize: 14,
         fontWeight: '400',
-        marginBottom: 16,
+        marginBottom: 18,
     },
     inputTitle: {
         fontSize: 16,

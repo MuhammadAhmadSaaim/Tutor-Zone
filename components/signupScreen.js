@@ -1,9 +1,12 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import SeparatorOR from "./helperWidgets/seperatorOr";
+import { useNavigation } from '@react-navigation/native';
 
 
 const SignUpScreen = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <Image style={styles.imageLogo} source={require('../assets/logoGrey.png')} />
@@ -51,7 +54,7 @@ const SignUpScreen = () => {
             </TouchableOpacity>
             <View style={styles.textContainer}>
                 <Text style={styles.logIntext}>Already have an account?</Text>
-                <TouchableOpacity style={styles.textButton}>
+                <TouchableOpacity style={styles.textButton} onPress={() => navigation.goBack()}>
                     <Text style={styles.textButtonText}>Log In</Text>
                 </TouchableOpacity>
             </View>
