@@ -1,10 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import SignUpScreen from "./components/signupScreen";
+import SplashScreen from "./components/splash_screen";
+import LogInScreen from "./components/loginScreen";
+import ForgetPasswoordScreen1 from "./components/forgetPassword1";
+import ForgetPasswoordScreen2 from "./components/forgetPassword2";
+import SetUpNewPasswordScreen from "./components/setUpNewPasswordScreen";
+import PasswordChangedScreen from "./components/passwordChangedScreen";
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <PasswordChangedScreen />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +21,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingBottom: 10,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
