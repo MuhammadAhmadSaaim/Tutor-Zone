@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import SeparatorOR from "./helperCompnents/seperatorOr";
+import SeparatorOR from "../helperCompnents/seperatorOr";
 
 const LogInScreen = () => {
     const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
-            <Image style={styles.imageLogo} source={require('../assets/logoGrey.png')} />
+            <Image style={styles.imageLogo} source={require('../../assets/logoGrey.png')} />
             <Text style={styles.title}>Log In Now!</Text>
             <Text style={styles.subTitle}>Lorem ipsum is simply dummy text of the printing and typing industry</Text>
 
@@ -19,7 +19,7 @@ const LogInScreen = () => {
                     style={styles.inputText}
                     placeholder="Username or Email"
                 />
-                <Image style={styles.socialButtonImage} source={require('../assets/user.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/user.png')} />
             </View>
 
             <Text style={styles.inputTitle}>Password</Text>
@@ -29,7 +29,7 @@ const LogInScreen = () => {
                     placeholder="Enter Password"
                     secureTextEntry
                 />
-                <Image style={styles.socialButtonImage} source={require('../assets/password.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/password.png')} />
             </View>
 
             <TouchableOpacity onPress={() => navigation.navigate('ForgetPasswoordScreen1')}>
@@ -46,12 +46,12 @@ const LogInScreen = () => {
             <SeparatorOR />
 
             <TouchableOpacity style={styles.socialButtons}>
-                <Image style={styles.socialButtonImage} source={require('../assets/google.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/google.png')} />
                 <Text style={styles.socialButtonText}> Continue With Google</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.socialButtons}>
-                <Image style={styles.socialButtonImage} source={require('../assets/facebook.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/facebook.png')} />
                 <Text style={styles.socialButtonText}>Continue With Facebook</Text>
             </TouchableOpacity>
 

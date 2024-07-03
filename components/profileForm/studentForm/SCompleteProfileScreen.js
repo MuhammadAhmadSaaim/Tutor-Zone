@@ -21,7 +21,7 @@ const SCompleteProfileScreen = () => {
                 <View>
                     <TouchableOpacity style={styles.createButton} onPress={() => navigation.reset({
                         index: 0,
-                        routes: [{ name: 'LogInScreen' }],
+                        routes: [{ name: 'DrawerNavigator' }],
                     })}
                     >
                         <Text style={styles.buttonText}>Continue</Text>

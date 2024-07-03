@@ -42,12 +42,15 @@ const SCreateProfile3 = () => {
             </View>
 
             <View style={styles.buttonBar}>
-                <TouchableOpacity style={styles.outlineButtonStyle}>
+                <TouchableOpacity style={styles.outlineButtonStyle} onPress={() => navigation.goBack()}>
                     <Text style={styles.outlineButtonText}>Previous</Text>
                 </TouchableOpacity>
                 <View style={{ width: 10 }} />
-                <TouchableOpacity style={styles.buttonStyle}>
-                    <Text style={styles.buttonText}>Next</Text>
+                <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.reset({
+                    index: 0,
+                    routes: [{ name: 'SCompleteProfileScreen' }],
+                })}>
+                    <Text style={styles.buttonText}>Save</Text>
                 </TouchableOpacity>
             </View>
         </View>

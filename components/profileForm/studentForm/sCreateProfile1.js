@@ -13,7 +13,7 @@ const SCreateProfile1 = () => {
 
     return (
         <View style={styles.container}>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
 
                 <SizedBox height={22} />
                 <View style={styles.titleContainer}>
@@ -40,8 +40,8 @@ const SCreateProfile1 = () => {
                 <TitleInputField title="Date of Birth" placeholder="E.g. 27 / 03 / 2002" image={date} />
                 <TitleInputField title="Location" placeholder="E.g. Model Town, Lahore" />
                 <SizedBox height={16} />
-                <TouchableOpacity style={styles.buttonStyle}>
-                    <Text style={styles.buttonText}>Create Your Profile</Text>
+                <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.navigate('SCreateProfile2')}>
+                    <Text style={styles.buttonText}>Next</Text>
                 </TouchableOpacity>
 
             </ScrollView>

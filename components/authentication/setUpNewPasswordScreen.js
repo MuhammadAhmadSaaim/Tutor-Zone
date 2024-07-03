@@ -8,7 +8,7 @@ const SetUpNewPasswordScreen = () => {
     return (
         <View style={styles.container}>
             <View>
-                <Image style={styles.imageLogo} source={require('../assets/logoGrey.png')} />
+                <Image style={styles.imageLogo} source={require('../../assets/logoGrey.png')} />
                 <Text style={styles.title}>Set A New Password</Text>
                 <Text style={styles.subTitle}>New password must be different from your previous used passwords</Text>
 
@@ -18,7 +18,7 @@ const SetUpNewPasswordScreen = () => {
                         style={styles.inputText}
                         placeholder="Enter New Password"
                     />
-                    <Image style={styles.socialButtonImage} source={require('../assets/password.png')} />
+                    <Image style={styles.socialButtonImage} source={require('../../assets/password.png')} />
                 </View>
 
                 <Text style={styles.inputTitle}>Confirm New Password</Text>
@@ -27,7 +27,7 @@ const SetUpNewPasswordScreen = () => {
                         style={styles.inputText}
                         placeholder="Confirm New Password"
                     />
-                    <Image style={styles.socialButtonImage} source={require('../assets/password.png')} />
+                    <Image style={styles.socialButtonImage} source={require('../../assets/password.png')} />
                 </View>
             </View>
 

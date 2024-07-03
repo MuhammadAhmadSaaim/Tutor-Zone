@@ -9,7 +9,7 @@ const ForgetPasswoordScreen1 = () => {
     return (
         <View style={styles.container}>
             <View>
-                <Image style={styles.imageLogo} source={require('../assets/logoGrey.png')} />
+                <Image style={styles.imageLogo} source={require('../../assets/logoGrey.png')} />
                 <Text style={styles.title}>Forget Password</Text>
                 <Text style={styles.subTitle}>No worries, we'll send you instructions for reset</Text>
 
@@ -19,7 +19,7 @@ const ForgetPasswoordScreen1 = () => {
                         style={styles.inputText}
                         placeholder="Enter Email Address"
                     />
-                    <Image style={styles.socialButtonImage} source={require('../assets/email.png')} />
+                    <Image style={styles.socialButtonImage} source={require('../../assets/email.png')} />
                 </View>
             </View>
 

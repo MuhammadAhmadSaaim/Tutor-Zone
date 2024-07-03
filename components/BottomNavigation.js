@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { View } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from "react-native-vector-icons/FontAwesome";
 
 import SCompleteProfileScreen from "./profileForm/studentForm/SCompleteProfileScreen";
 import SCreateProfile1 from "./profileForm/studentForm/sCreateProfile1";
@@ -11,59 +10,50 @@ import ExploreTeachersScreen from "./studentHome/explorTeachersScreen";
 
 const Tab = createBottomTabNavigator();
 
+const images = {
+    ExploreTeachers: {
+        focused: require('../assets/graduationPurple.png'),
+        unfocused: require('../assets/graduationGrey.png'),
+    },
+    SCreateProfile1: {
+        focused: require('../assets/notificationPurple.png'),
+        unfocused: require('../assets/notificationGrey.png'),
+    },
+    SCreateProfile3: {
+        focused: require('../assets/addBlue.png'),
+        unfocused: require('../assets/addGrey.png'),
+    },
+    SCreateProfile2: {
+        focused: require('../assets/messagePurple.png'),
+        unfocused: require('../assets/messageGrey.png'),
+    },
+    SCompleteProfileScreen: {
+        focused: require('../assets/personPurple.png'),
+        unfocused: require('../assets/personGrey.png'),
+    },
+};
+
 function BottomNavigation() {
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
-                tabBarIcon: ({ focused, color, size }) => {
-                    let iconName;
-                    let iconSize = 20;
-
-                    if (route.name === 'ExploreTeachers') {
-                        iconName = focused ? 'graduation-cap' : 'graduation-cap';
-                    } else if (route.name === 'SCreateProfile1') {
-                        iconName = focused ? 'bell' : 'bell';
-                    } else if (route.name === 'SCreateProfile3') {
-                        iconName = focused ? 'plus' : 'plus';
-                    } else if (route.name === 'SCreateProfile2') {
-                        iconName = focused ? 'commenting-o' : 'commenting-o';
-                    } else if (route.name === 'SCompleteProfileScreen') {
-                        iconName = focused ? 'user-o' : 'user-o';
-                    }
-
-                    if (iconName === 'plus') {
-                        return (
-                            <View style={{
-                                width: iconSize + 20,
-                                height: iconSize + 20,
-                                borderRadius: (iconSize + 20) / 2,
-                                backgroundColor: '#EBF0FC',
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}>
-                                <Icon name={iconName} size={iconSize} color="#054BB4" />
-                            </View>
-                        );
-                    }
+                tabBarIcon: ({ focused }) => {
+                    const size = route.name === 'SCreateProfile3' ? 48 : 22;
+                    const imageSource = focused ? images[route.name].focused : images[route.name].unfocused;
 
                     return (
-                        <View style={{ alignItems: 'center' }}>
-                            <Icon name={iconName} size={iconSize} color={color} />
-                            {focused && <View style={{
-                                position: 'absolute',
-                                top: 0,
-                                width: 6,
-                                height: 6,
-                                borderRadius: 3,
-                                backgroundColor: '#5973F2',
-                                marginTop: 30
-                            }} />}
+                        <View style={styles.iconContainer}>
+                            <Image
+                                source={imageSource}
+                                style={{ width: size, height: size }}
+                            />
+                            {focused && route.name !== 'SCreateProfile3' && (
+                                <View style={styles.dotIndicator} />
+                            )}
                         </View>
                     );
                 },
-                tabBarStyle: { height: 70, paddingBottom: 10, paddingTop: 5 },
-                tabBarActiveTintColor: '#5973F2',
-                tabBarInactiveTintColor: '#526270',
+                tabBarStyle: { height: 73, },
                 headerShown: false,
                 tabBarShowLabel: false,
             })}
@@ -76,5 +66,21 @@ function BottomNavigation() {
         </Tab.Navigator>
     );
 }
+
+const styles = StyleSheet.create({
+    iconContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+    },
+    dotIndicator: {
+        position: 'absolute',
+        top: 50,
+        width: 6,
+        height: 6,
+        borderRadius: 3,
+        backgroundColor: '#5973F2',
+    },
+});
 
 export default BottomNavigation;

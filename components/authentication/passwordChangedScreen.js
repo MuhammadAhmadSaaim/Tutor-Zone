@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const { width, height } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 
 const PasswordChangedScreen = () => {
@@ -10,7 +10,7 @@ const PasswordChangedScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={require('../assets/greenCircledTick.png')} />
+            <Image style={styles.image} source={require('../../assets/greenCircledTick.png')} />
 
             <View style={styles.subContainer}>
                 <View>

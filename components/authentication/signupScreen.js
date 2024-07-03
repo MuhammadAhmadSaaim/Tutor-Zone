@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import SeparatorOR from "./helperCompnents/seperatorOr";
+
 import { useNavigation } from '@react-navigation/native';
+import SeparatorOR from "../helperCompnents/seperatorOr";
 
 
 const SignUpScreen = () => {
@@ -9,7 +10,7 @@ const SignUpScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.imageLogo} source={require('../assets/logoGrey.png')} />
+            <Image style={styles.imageLogo} source={require('../../assets/logoGrey.png')} />
             <Text style={styles.title}>Sign Up Now!</Text>
             <Text style={styles.subTitle}>Lorem ipsum is simpy dumy text of printing and typing industry</Text>
 
@@ -19,7 +20,7 @@ const SignUpScreen = () => {
                     style={styles.inputText}
                     placeholder="Enter User Name"
                 />
-                <Image style={styles.socialButtonImage} source={require('../assets/user.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/user.png')} />
             </View>
 
             <Text style={styles.inputTitle}>Email Address</Text>
@@ -28,7 +29,7 @@ const SignUpScreen = () => {
                     style={styles.inputText}
                     placeholder="Enter Email Address"
                 />
-                <Image style={styles.socialButtonImage} source={require('../assets/email.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/email.png')} />
             </View>
 
             <Text style={styles.inputTitle}>Password</Text>
@@ -37,7 +38,7 @@ const SignUpScreen = () => {
                     style={styles.inputText}
                     placeholder="Enter Password"
                 />
-                <Image style={styles.socialButtonImage} source={require('../assets/password.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/password.png')} />
             </View>
 
             <TouchableOpacity style={styles.createButton} onPress={() => navigation.reset({
@@ -48,11 +49,11 @@ const SignUpScreen = () => {
             </TouchableOpacity>
             <SeparatorOR />
             <TouchableOpacity style={styles.socialButtons}>
-                <Image style={styles.socialButtonImage} source={require('../assets/google.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/google.png')} />
                 <Text style={styles.socialButtonText}> Continue With Google</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.socialButtons}>
-                <Image style={styles.socialButtonImage} source={require('../assets/facebook.png')} />
+                <Image style={styles.socialButtonImage} source={require('../../assets/facebook.png')} />
                 <Text style={styles.socialButtonText}>Continue With Facebook</Text>
             </TouchableOpacity>
             <View style={styles.textContainer}>

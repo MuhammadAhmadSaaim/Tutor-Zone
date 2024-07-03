@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -9,7 +9,7 @@ const ForgetPasswoordScreen2 = () => {
     return (
         <View style={styles.container}>
             <View>
-                <Image style={styles.imageLogo} source={require('../assets/logoGrey.png')} />
+                <Image style={styles.imageLogo} source={require('../../assets/logoGrey.png')} />
                 <Text style={styles.title}>Forget Password</Text>
                 <Text style={styles.subTitle}>We've sent reset password link to your email</Text>
                 <Text style={styles.subTitle}>alisonh952@gmail.com</Text>

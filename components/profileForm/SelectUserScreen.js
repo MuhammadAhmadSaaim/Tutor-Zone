@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text, Dimensions, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import SizedBox from './helperCompnents/SizedBox';
-import SelectUserCard from "./helperCompnents/userSelectionCard";
-import teacher from "../assets/teacher.png"
-import student from "../assets/student.png"
+import SizedBox from "../helperCompnents/SizedBox";
+import SelectUserCard from "../helperCompnents/userSelectionCard";
+import teacher from "../../assets/teacher.png"
+import student from "../../assets/student.png"
 
-const { width, height } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 
 const SelectUserScreen = () => {
@@ -15,7 +15,7 @@ const SelectUserScreen = () => {
     return (
         <View style={styles.container}>
             <View>
-                <Image style={styles.logoStyle} source={require('../assets/logoText.png')} />
+                <Image style={styles.logoStyle} source={require('../../assets/logoText.png')} />
                 <SizedBox height={40} />
                 <Text style={styles.subtitle}>Join as a Teacher or Student</Text>
                 <SizedBox height={20} />
@@ -24,7 +24,7 @@ const SelectUserScreen = () => {
                 <SelectUserCard imageSrc={student} text="I am a Student" borderColor="#054BB4" />
             </View>
             <View>
-                <TouchableOpacity style={styles.buttonStyle}>
+                <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.navigate('SCreateProfile1')}>
                     <Text style={styles.buttonText}>Create Your Profile</Text>
                 </TouchableOpacity>
             </View>

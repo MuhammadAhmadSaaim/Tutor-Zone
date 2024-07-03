@@ -47,11 +47,11 @@ const SCreateProfile2 = () => {
             </View>
 
             <View style={styles.buttonBar}>
-                <TouchableOpacity style={styles.outlineButtonStyle}>
+                <TouchableOpacity style={styles.outlineButtonStyle} onPress={() => navigation.goBack()}>
                     <Text style={styles.outlineButtonText}>Previous</Text>
                 </TouchableOpacity>
                 <View style={{ width: 10 }} />
-                <TouchableOpacity style={styles.buttonStyle}>
+                <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.navigate('SCreateProfile3')}>
                     <Text style={styles.buttonText}>Next</Text>
                 </TouchableOpacity>
             </View>
