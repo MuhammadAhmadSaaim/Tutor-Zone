@@ -5,17 +5,17 @@ import { useNavigation } from '@react-navigation/native';
 const { width, height } = Dimensions.get('window');
 
 
-const PasswordChangedScreen = () => {
+const SCompleteProfileScreen = () => {
     const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={require('../assets/greenCircledTick.png')} />
+            <Image style={styles.image} source={require('../../../assets/greenCircledTick.png')} />
 
             <View style={styles.subContainer}>
                 <View>
-                    <Text style={styles.title}>Password Changed</Text>
-                    <Text style={styles.subTitle}>Your Password has been changed successfully</Text>
+                    <Text style={styles.title}>Your Profile Has Been Created Successfully!</Text>
+                    <Text style={styles.subTitle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                 </View>
 
                 <View>
@@ -24,7 +24,7 @@ const PasswordChangedScreen = () => {
                         routes: [{ name: 'LogInScreen' }],
                     })}
                     >
-                        <Text style={styles.buttonText}>Go Back To Log In Page</Text>
+                        <Text style={styles.buttonText}>Continue</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -103,4 +103,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default PasswordChangedScreen;
+export default SCompleteProfileScreen;

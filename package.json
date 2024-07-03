@@ -11,6 +11,8 @@
   "dependencies": {
     "@react-aria/checkbox": "^3.14.3",
     "@react-aria/tabs": "^3.9.1",
+    "@react-navigation/bottom-tabs": "^6.6.0",
+    "@react-navigation/drawer": "^6.7.0",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/stack": "^6.4.0",
     "expo": "~51.0.17",
@@ -21,6 +23,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.2",
+    "react-native-gesture-handler": "^2.17.1",
     "react-native-vector-icons": "^10.1.0"
   },
   "devDependencies": {
