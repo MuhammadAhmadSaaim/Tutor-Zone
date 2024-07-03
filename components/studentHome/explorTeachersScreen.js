@@ -15,7 +15,7 @@ const ExploreTeachersScreen = () => {
 
     return (
         <View style={styles.container}>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
                 <SizedBox height={20} />
                 <View style={styles.appbar}>
                     <TouchableOpacity onPress={() => navigation.openDrawer()}>
@@ -75,7 +75,7 @@ const ExploreTeachersScreen = () => {
                     phoneNumber="+92 304567898"
                     description="TEFL Certified English Teacher With 5 Years Experience"
                     languages={["Speaking English (Native),", "+2"]}
-                    isFavorite={true}
+                    isFavorite={false}
                 />
                 <TeacherCard
                     imageUrl={man4}
