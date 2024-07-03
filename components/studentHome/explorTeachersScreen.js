@@ -41,9 +41,9 @@ const ExploreTeachersScreen = () => {
                         <Image source={require("../../assets/sort.png")} style={{ width: 16, height: 16 }} />
                     </View>
                 </View>
+                <SizedBox height={10} />
                 <View style={styles.line} />
-                <SizedBox height={16} />
-
+                <SizedBox height={8} />
                 <TeacherCard
                     imageUrl={man1}
                     name="Russell M."
@@ -121,12 +121,11 @@ const styles = StyleSheet.create({
     },
     line: {
         position: 'relative',
-        top: 14,
         left: 0,
         right: 0,
         height: 1,
         backgroundColor: '#DDDDDD',
-        marginBottom: 20,
+        marginBottom: 16,
     },
 });
 
