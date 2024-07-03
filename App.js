@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
 import SignUpScreen from "./components/signupScreen";
-import SplashScreen from "./components/splash_screen";
+import SplashScreen from "./components/splashScreen";
 import LogInScreen from "./components/loginScreen";
 import ForgetPasswoordScreen1 from "./components/forgetPassword1";
 import ForgetPasswoordScreen2 from "./components/forgetPassword2";
 import SetUpNewPasswordScreen from "./components/setUpNewPasswordScreen";
 import PasswordChangedScreen from "./components/passwordChangedScreen";
 import SelectUserScreen from "./components/SelectUserScreen";
+
+
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

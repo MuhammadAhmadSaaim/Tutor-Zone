@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Dimensions, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import SizedBox from './helperCompnents/SizedBox';
 import SelectUserCard from "./helperCompnents/userSelectionCard";
 import teacher from "../assets/teacher.png"
 import student from "../assets/student.png"
+
+const { width, height } = Dimensions.get('window');
 
 
 const SelectUserScreen = () => {
@@ -23,7 +25,7 @@ const SelectUserScreen = () => {
             </View>
             <View>
                 <TouchableOpacity style={styles.buttonStyle}>
-                    <Text style={styles.buttonText}>Continue</Text>
+                    <Text style={styles.buttonText}>Create Your Profile</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     logoStyle: {
-        marginTop: 100,
+        marginTop: height / 9,
         width: 130,
         height: 65,
         alignSelf: 'center',
