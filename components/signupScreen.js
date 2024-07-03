@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import SeparatorOR from "./helperWidgets/seperatorOr";
+import SeparatorOR from "./helperCompnents/seperatorOr";
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -40,7 +40,10 @@ const SignUpScreen = () => {
                 <Image style={styles.socialButtonImage} source={require('../assets/password.png')} />
             </View>
 
-            <TouchableOpacity style={styles.createButton}>
+            <TouchableOpacity style={styles.createButton} onPress={() => navigation.reset({
+                index: 0,
+                routes: [{ name: 'SelectUserScreen' }],
+            })}>
                 <Text style={styles.buttonText}>Create An Account</Text>
             </TouchableOpacity>
             <SeparatorOR />

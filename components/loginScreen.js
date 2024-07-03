@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import SeparatorOR from "./helperWidgets/seperatorOr";
+import SeparatorOR from "./helperCompnents/seperatorOr";
 
 const LogInScreen = () => {
     const navigation = useNavigation();
@@ -36,7 +36,10 @@ const LogInScreen = () => {
                 <Text style={styles.forgetPassword}>Forgot Password?</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.createButton}>
+            <TouchableOpacity style={styles.createButton} onPress={() => navigation.reset({
+                index: 0,
+                routes: [{ name: 'SelectUserScreen' }],
+            })}>
                 <Text style={styles.buttonText}>Log In Your Account</Text>
             </TouchableOpacity>
 
