@@ -5,8 +5,6 @@ import SizedBox from "../helperCompnents/SizedBox";
 import InputField from "../helperCompnents/InputField";
 import search from "../../assets/search.png"
 
-
-
 const ExploreTeachersScreen = () => {
     const navigation = useNavigation();
 
@@ -15,7 +13,9 @@ const ExploreTeachersScreen = () => {
             <ScrollView>
                 <SizedBox height={20} />
                 <View style={styles.appbar}>
-                    <Image source={require("../../assets/userIcon.png")} style={styles.appbarImage} />
+                    <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                        <Image source={require("../../assets/userIcon.png")} style={styles.appbarImage} />
+                    </TouchableOpacity>
                     <Text style={{ fontSize: 20, fontWeight: 500 }}>Explore Teachers</Text>
                     <Image source={require("../../assets/drawerIcon.png")} style={styles.appbarImage} />
                 </View>
