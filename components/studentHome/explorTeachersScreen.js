@@ -4,6 +4,11 @@ import { useNavigation } from '@react-navigation/native';
 import SizedBox from "../helperCompnents/SizedBox";
 import InputField from "../helperCompnents/InputField";
 import search from "../../assets/search.png"
+import man1 from "../../assets/man1.png"
+import man2 from "../../assets/man2.png"
+import man3 from "../../assets/man3.png"
+import man4 from "../../assets/man4.png"
+import TeacherCard from "../helperCompnents/TeacherCard";
 
 const ExploreTeachersScreen = () => {
     const navigation = useNavigation();
@@ -36,6 +41,53 @@ const ExploreTeachersScreen = () => {
                         <Image source={require("../../assets/sort.png")} style={{ width: 16, height: 16 }} />
                     </View>
                 </View>
+                <View style={styles.line} />
+                <SizedBox height={16} />
+
+                <TeacherCard
+                    imageUrl={man1}
+                    name="Russell M."
+                    location="Lahore, Pakistan"
+                    experience="5"
+                    education="BS Computer"
+                    phoneNumber="+92 304567898"
+                    description="TEFL Certified English Teacher With 5 Years Experience"
+                    languages={["Speaking English (Native),", "+2"]}
+                    isFavorite={true}
+                />
+                <TeacherCard
+                    imageUrl={man2}
+                    name="Russell M."
+                    location="Lahore, Pakistan"
+                    experience="5"
+                    education="BS Computer"
+                    phoneNumber="+92 304567898"
+                    description="TEFL Certified English Teacher With 5 Years Experience"
+                    languages={["Speaking English (Native),", "+2"]}
+                    isFavorite={true}
+                />
+                <TeacherCard
+                    imageUrl={man3}
+                    name="Russell M."
+                    location="Lahore, Pakistan"
+                    experience="5"
+                    education="BS Computer"
+                    phoneNumber="+92 304567898"
+                    description="TEFL Certified English Teacher With 5 Years Experience"
+                    languages={["Speaking English (Native),", "+2"]}
+                    isFavorite={true}
+                />
+                <TeacherCard
+                    imageUrl={man4}
+                    name="Russell M."
+                    location="Lahore, Pakistan"
+                    experience="5"
+                    education="BS Computer"
+                    phoneNumber="+92 304567898"
+                    description="TEFL Certified English Teacher With 5 Years Experience"
+                    languages={["Speaking English (Native),", "+2"]}
+                    isFavorite={true}
+                />
 
             </ScrollView>
         </View>
@@ -53,6 +105,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     appbarImage: {
+        marginTop: 1,
         width: 30,
         height: 30,
     },
@@ -65,6 +118,15 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
+    },
+    line: {
+        position: 'relative',
+        top: 14,
+        left: 0,
+        right: 0,
+        height: 1,
+        backgroundColor: '#DDDDDD',
+        marginBottom: 20,
     },
 });
 
