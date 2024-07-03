@@ -13,6 +13,7 @@ const LogInScreen = () => {
             <Text style={styles.subTitle}>Lorem ipsum is simply dummy text of the printing and typing industry</Text>
 
             <Text style={styles.inputTitle}>Username or Email</Text>
+
             <View style={styles.inputContainer}>
                 <TextInput
                     style={styles.inputText}
