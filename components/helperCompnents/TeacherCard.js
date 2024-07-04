@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import globe from '../../assets/globe.png';
 
@@ -12,10 +12,11 @@ const TeacherCard = ({
     phoneNumber,
     description,
     languages,
-    isFavorite
+    isFavorite,
+    onPress,
 }) => {
     return (
-        <View style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={onPress}>
             <View style={styles.header}>
                 <Image source={imageUrl} style={styles.image} />
                 <View style={styles.info}>
@@ -40,7 +41,7 @@ const TeacherCard = ({
                     ))}
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 

@@ -16,6 +16,7 @@ import SCompleteProfileScreen from "../components/profileForm/studentForm/SCompl
 import SCreateProfile3 from "../components/profileForm/studentForm/sCreateProfile3";
 import ExploreTeachersScreen from "../components/studentHome/explorTeachersScreen";
 import DrawerNavigator from "../components/DrawerNavigation";
+import SeeTeacherProfileScreen from "./studentHome/SeeTeacherProfileScreen";
 
 const Stack = createStackNavigator();
 
@@ -37,6 +38,7 @@ export default function NavigationStack() {
                 <Stack.Screen name="SCompleteProfileScreen" component={SCompleteProfileScreen} />
                 <Stack.Screen name="ExploreTeachersScreen" component={ExploreTeachersScreen} />
                 <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
+                <Stack.Screen name="SeeTeacherProfileScreen" component={SeeTeacherProfileScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );

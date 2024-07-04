@@ -55,6 +55,7 @@ const ExploreTeachersScreen = () => {
                         description="TEFL Certified English Teacher With 5 Years Experience"
                         languages={["Speaking English (Native),", "+2"]}
                         isFavorite={true}
+                        onPress={() => navigation.navigate('SeeTeacherProfileScreen')}
                     />
                     <TeacherCard
                         imageUrl={man2}
