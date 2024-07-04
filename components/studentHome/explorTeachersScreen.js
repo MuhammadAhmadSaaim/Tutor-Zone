@@ -16,79 +16,84 @@ const ExploreTeachersScreen = () => {
     return (
         <View style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <SizedBox height={20} />
-                <View style={styles.appbar}>
-                    <TouchableOpacity onPress={() => navigation.openDrawer()}>
-                        <Image source={require("../../assets/userIcon.png")} style={styles.appbarImage} />
-                    </TouchableOpacity>
-                    <Text style={{ fontSize: 20, fontWeight: 500 }}>Explore Teachers</Text>
-                    <Image source={require("../../assets/drawerIcon.png")} style={styles.appbarImage} />
-                </View>
-                <SizedBox height={24} />
-                <View style={styles.searchRow}>
-                    <InputField placeholder="Search Tutor" image={search} />
-                    <Image source={require("../../assets/filters.png")} style={{ width: 48, height: 48 }} />
-                </View>
-                <SizedBox height={20} />
-                <View style={styles.appbar}>
-                    <Text style={{ fontSize: 14, color: "#526270" }}>
-                        18506 Tutors
-                    </Text>
+                <View>
+                    <SizedBox height={20} />
                     <View style={styles.appbar}>
-                        <Text style={{ fontSize: 14, color: "#526270", marginRight: 5 }}>
-                            Sort By Relevance
-                        </Text>
-                        <Image source={require("../../assets/sort.png")} style={{ width: 16, height: 16 }} />
+                        <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                            <Image source={require("../../assets/userIcon.png")} style={styles.appbarImage} />
+                        </TouchableOpacity>
+                        <Text style={{ fontSize: 20, fontWeight: 500 }}>Explore Teachers</Text>
+                        <Image source={require("../../assets/drawerIcon.png")} style={styles.appbarImage} />
                     </View>
-                </View>
-                <SizedBox height={10} />
-                <View style={styles.line} />
-                <SizedBox height={8} />
-                <TeacherCard
-                    imageUrl={man1}
-                    name="Russell M."
-                    location="Lahore, Pakistan"
-                    experience="5"
-                    education="BS Computer"
-                    phoneNumber="+92 304567898"
-                    description="TEFL Certified English Teacher With 5 Years Experience"
-                    languages={["Speaking English (Native),", "+2"]}
-                    isFavorite={true}
-                />
-                <TeacherCard
-                    imageUrl={man2}
-                    name="Russell M."
-                    location="Lahore, Pakistan"
-                    experience="5"
-                    education="BS Computer"
-                    phoneNumber="+92 304567898"
-                    description="TEFL Certified English Teacher With 5 Years Experience"
-                    languages={["Speaking English (Native),", "+2"]}
-                    isFavorite={true}
-                />
-                <TeacherCard
-                    imageUrl={man3}
-                    name="Russell M."
-                    location="Lahore, Pakistan"
-                    experience="5"
-                    education="BS Computer"
-                    phoneNumber="+92 304567898"
-                    description="TEFL Certified English Teacher With 5 Years Experience"
-                    languages={["Speaking English (Native),", "+2"]}
-                    isFavorite={false}
-                />
-                <TeacherCard
-                    imageUrl={man4}
-                    name="Russell M."
-                    location="Lahore, Pakistan"
-                    experience="5"
-                    education="BS Computer"
-                    phoneNumber="+92 304567898"
-                    description="TEFL Certified English Teacher With 5 Years Experience"
-                    languages={["Speaking English (Native),", "+2"]}
-                    isFavorite={true}
-                />
+                    <SizedBox height={24} />
+                    <View style={styles.searchRow}>
+                        <InputField placeholder="Search Tutor" image={search} />
+                        <Image source={require("../../assets/filters.png")} style={{ width: 48, height: 48 }} />
+                    </View>
+                    <SizedBox height={20} />
+                    <View style={styles.appbar}>
+                        <Text style={{ fontSize: 14, color: "#526270" }}>
+                            18506 Tutors
+                        </Text>
+                        <View style={styles.appbar}>
+                            <Text style={{ fontSize: 14, color: "#526270", marginRight: 5 }}>
+                                Sort By Relevance
+                            </Text>
+                            <Image source={require("../../assets/sort.png")} style={{ width: 16, height: 16 }} />
+                        </View>
+                    </View>
+                    <SizedBox height={10} />
+                    <View style={styles.line} />
+                    <SizedBox height={8} />
+                    <TeacherCard
+                        imageUrl={man1}
+                        name="Russell M."
+                        location="Lahore, Pakistan"
+                        experience="5"
+                        education="BS Computer"
+                        phoneNumber="+92 304567898"
+                        description="TEFL Certified English Teacher With 5 Years Experience"
+                        languages={["Speaking English (Native),", "+2"]}
+                        isFavorite={true}
+                    />
+                    <TeacherCard
+                        imageUrl={man2}
+                        name="Russell M."
+                        location="Lahore, Pakistan"
+                        experience="5"
+                        education="BS Computer"
+                        phoneNumber="+92 304567898"
+                        description="TEFL Certified English Teacher With 5 Years Experience"
+                        languages={["Speaking English (Native),", "+2"]}
+                        isFavorite={true}
+                    />
+                    <TeacherCard
+                        imageUrl={man3}
+                        name="Russell M."
+                        location="Lahore, Pakistan"
+                        experience="5"
+                        education="BS Computer"
+                        phoneNumber="+92 304567898"
+                        description="TEFL Certified English Teacher With 5 Years Experience"
+                        languages={["Speaking English (Native),", "+2"]}
+                        isFavorite={false}
+                    />
+                    <TeacherCard
+                        imageUrl={man4}
+                        name="Russell M."
+                        location="Lahore, Pakistan"
+                        experience="5"
+                        education="BS Computer"
+                        phoneNumber="+92 304567898"
+                        description="TEFL Certified English Teacher With 5 Years Experience"
+                        languages={["Speaking English (Native),", "+2"]}
+                        isFavorite={true}
+                    />
 
+                    <TouchableOpacity style={styles.createButton}>
+                        <Text style={styles.buttonText}>Load More</Text>
+                    </TouchableOpacity>
+                </View>
             </ScrollView>
         </View>
     );
@@ -125,6 +130,20 @@ const styles = StyleSheet.create({
         right: 0,
         height: 1,
         backgroundColor: '#DDDDDD',
+        marginBottom: 16,
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: '500',
+    },
+    createButton: {
+        padding: 8,
+        height: 48,
+        backgroundColor: '#054BB4',
+        borderRadius: 12,
+        justifyContent: 'center',
+        alignItems: 'center',
         marginBottom: 16,
     },
 });
